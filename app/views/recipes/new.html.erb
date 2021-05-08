@@ -1,0 +1,7 @@
+
+<%= form_with model: @recipe do |form| %>
+  <%= form.text_field :title %>
+  <%= form.text_area :description, size: "60x10" %>
+  <%= form.check_box :active %>
+  <%= form.submit %>
+<% end %>

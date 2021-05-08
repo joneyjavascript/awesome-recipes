@@ -1,0 +1,16 @@
+
+<% content_for :title do %>
+  <%= t "pages.recipes.subtitle" %>
+<% end %>
+
+<%= link_to 'Criar nova receita', new_recipe_path %>
+
+<section class="last-recipes">
+    <header>Receitas</header>
+    <ul>
+    <% @recipes.each do |recipe| %>
+        <li><%= link_to recipe.title, recipe %></li>
+    <% end %>
+    </ul>
+</section>
+

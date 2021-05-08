@@ -1,0 +1,18 @@
+
+
+<% if @recipe.valid?  %>
+    <p class="success"><%= @mensagem %></p>
+<% else %>
+    <p class="danger"><%= @mensagem %></p>
+
+    <section>
+        <h2>Motivos</h2>
+        <ul>
+            <% @recipe.errors.full_messages.each do |error_message| %>
+                <li><%= error_message %></li>
+            <% end %>
+        </ul>
+    </section>
+<% end %>
+
+<a href="#" data-back-button>Voltar</a>

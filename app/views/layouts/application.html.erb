@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t "layout.title" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <header id="layout-header">
+            <h1><%= t "layout.title" %></h1>
+            <p><strong><%= yield :title %></strong></p>
+          </header>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="layout-menu">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <%= link_to (t "layout.menu.home"), root_path, { class: "nav-link" } %>
+                  </li>
+
+                  <li class="nav-item">
+                    <%= link_to (t "layout.menu.recipes"), recipes_path, { class: "nav-link" } %>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <section class="content" id="layout-content">
+            <%= yield %>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<% console %>

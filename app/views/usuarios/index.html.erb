@@ -1,0 +1,23 @@
+
+
+<%= button_to 'Novo Usuário', new_usuario_path %>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% Usuario.limit(1).each do |usuario| %>
+        <tr>
+            <td><%= usuario.id %></td>
+            <td><%= usuario.name %></td>
+            <td><%= usuario.email %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

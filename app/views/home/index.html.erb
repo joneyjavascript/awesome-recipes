@@ -1,0 +1,25 @@
+<% content_for :title do %>
+  <%= t "pages.home.subtitle" %>
+<% end %>
+
+<section class="last-recipes">
+    <header>Últimas receitas</header>
+   
+    <div class="container">
+        <div class="row">
+            <% @last_recipes.each do |recipe| %>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= recipe.title %></h5>
+                            <h6 class="card-subtitle mb-2 text-muted"><%= recipe.description %></h6>
+                            <p class="card-text"></p>
+                            <%= link_to 'Ver mais', recipe, { class: 'card-link' } %>
+                            <a href="javascript:void" data-favorite-recipe="<%= recipe.id %>">Favoritar</a>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</section>
