@@ -16,8 +16,8 @@ Features
 ruby 2.6.7p197 (2021-04-05 revision 67941) [x64-mingw32]
 
 * System dependencies
-+ bootstrap
-+ rails-i18n
+  * bootstrap
+  * rails-i18n
 
 * Configuration
 
@@ -25,8 +25,8 @@ ruby 2.6.7p197 (2021-04-05 revision 67941) [x64-mingw32]
 rails db:create
 
 * Database initialization
-rails db:migrate
-rails db:seed
+  * rails db:migrate
+  * rails db:seed
 
 * How to run the test suite
 rails test
