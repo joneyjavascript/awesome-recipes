@@ -10,7 +10,10 @@ Features
   + Login
   + Home
   + Recipes
-    + register new recipes
+    + Register new recipes
+  + My recipes
+    + Favorites recipes
+    + My recipes
 
 * Ruby version
 ruby 2.6.7p197 (2021-04-05 revision 67941) [x64-mingw32]
