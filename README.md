@@ -10,10 +10,9 @@ Awesome Recipes
 + Login (Jwt, Rails Session)
 + Internacionalization
 + Api
-  + create sessions with JWT
   + RESTFUl Resources
-    + sessions 
-    + recipes
+    + sessions (create sessions with JWT)
+    + recipes (use token header generate from sessions#create)
 + Pages
   + Login
   + Home
