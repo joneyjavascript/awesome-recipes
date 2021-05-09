@@ -23,6 +23,10 @@ ruby 2.6.7p197 (2021-04-05 revision 67941) [x64-mingw32]
 * System dependencies
   * bootstrap
   * rails-i18n
+  * jwt
+  * bcrypt
+  * truemail
+  * responders
 
 * Configuration
 
