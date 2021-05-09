@@ -9,6 +9,11 @@ This is a project to create a basic system for recipes community.
 Awesome Recipes
 + Login (Jwt, Rails Session)
 + Internacionalization
++ Api
+  + create sessions with JWT
+  + RESTFUl Resources
+    + sessions 
+    + recipes
 + Pages
   + Login
   + Home
