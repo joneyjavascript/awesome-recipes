@@ -6,7 +6,7 @@ This is a project to create a basic system for recipes community.
 
 
 
-Features
+Awesome Recipes
 + Login (Jwt, Rails Session)
 + Internacionalization
 + Pages
