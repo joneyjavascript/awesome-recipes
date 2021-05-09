@@ -15,7 +15,9 @@
       <div class="row">
         <div class="col">
           <header id="layout-header">
-            <h1><%= t "layout.title" %></h1>
+            <h1>
+              <%= link_to (t t "layout.title"), root_path, { class: "nav-link" } %>
+            </h1>
             <p><strong><%= yield :title %></strong></p>
           </header>
         </div>
@@ -29,14 +31,32 @@
               </button>
 
               <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
                     <%= link_to (t "layout.menu.home"), root_path, { class: "nav-link" } %>
                   </li>
 
-                  <li class="nav-item">
-                    <%= link_to (t "layout.menu.recipes"), recipes_path, { class: "nav-link" } %>
-                  </li>
+                  <% if logged_in? %>
+                    <li class="nav-item">
+                      <%= link_to (t "layout.menu.recipes"), recipes_path, { class: "nav-link" } %>
+                    </li>
+
+                    <li class="nav-item">
+                      <%= link_to "Minhas receitas", recipes_path, { class: "nav-link" } %>
+                    </li>
+                  <% else %>
+                    <li class="nav-item">
+                      <%= link_to (t "layout.menu.login"), new_session_path, { class: "nav-link" } %>
+                    </li>
+                  <% end %>
+                </ul>
+
+                <ul class="navbar-nav">
+                  <% if logged_in? %>
+                    <li class="nav-item">
+                      <%= link_to "Sair", session_logout_path, { class: "nav-link" } %>
+                    </li>
+                  <% end %>
                 </ul>
               </div>
             </nav>
@@ -46,6 +66,14 @@
       <div class="row">
         <div class="col">
           <section class="content" id="layout-content">
+            <section class="flash-messages">
+              <% flash.each do |type, msg| %>
+                <div class="alert alert-<%= type %>">
+                  <%= msg %>
+                </div>
+              <% end %>
+            </section>
+
             <%= yield %>
           </section>
         </div>

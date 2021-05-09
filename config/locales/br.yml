@@ -4,11 +4,14 @@ br:
     menu:
       home: "Principal"
       recipes: "Receitas"
+      login: "Entrar"
   pages:
     recipes:
       subtitle: Encontre aqui todas as receitas cadastradas
     home:
       subtitle: A melhor comunidades de receitas do Brasil
+    login:
+      subtitle: Use seu e-mail e senha para ter acesso a muito mais recursos na plataforma
   activerecord:
     attributes:
       recipe:

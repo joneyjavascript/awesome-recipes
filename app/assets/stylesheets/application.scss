@@ -24,7 +24,16 @@ header#layout-header {
    padding: 10px;
    border-bottom: 1px solid #000;
    background: #f7f7f7;;
-   color: #F00;
+
+   a {
+      color: #F00;
+      padding: 0;
+      margin: 0;
+
+      &:hover {
+         text-decoration: none;
+      }
+   }
 
    p {
       color: #777;
@@ -32,6 +41,21 @@ header#layout-header {
 }
 
 section#layout-content {
-  padding: 10px;
+  padding: 20px;
   background:white;
+}
+
+section.page-block {
+
+   &.page-block-center {
+      width: 400px;
+      margin: 0 auto;
+   }
+
+   h2 {
+     font-size: 1.2rem;
+     padding-bottom: 10px;
+     border-bottom: 1px solid #AAA;
+     margin-bottom: 20px;
+   }
 }
