@@ -10,16 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_07_214737) do
+ActiveRecord::Schema.define(version: 2021_05_09_001944) do
 
 # Could not dump table "recipes" because of following StandardError
 #   Unknown type 'bool' for column 'active'
 
-  create_table "usuarios", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "hash_senha"
-    t.boolean "active"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

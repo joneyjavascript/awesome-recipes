@@ -5,8 +5,8 @@
 
 <%= link_to 'Criar nova receita', new_recipe_path %>
 
-<section class="last-recipes">
-    <header>Receitas</header>
+<section class="page-block last-recipes">
+    <h2>Receitas</h2>
     <ul>
     <% @recipes.each do |recipe| %>
         <li><%= link_to recipe.title, recipe %></li>

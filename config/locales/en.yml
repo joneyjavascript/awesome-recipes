@@ -35,6 +35,9 @@ en:
     menu:
       home: "Home"
       recipes: "Recipes"
+      login: "Login"
+    login:
+      subtitle: Use seu e-mail e senha para ter acesso a muito mais recursos na plataforma
   pages:
     recipes:
       subtitle: Find all registered recipes here
