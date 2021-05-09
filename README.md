@@ -1,10 +1,10 @@
-# README
+# Awesome Recipes
+
+This is a project to create a basic system for recipes community.
 
 ![image](https://user-images.githubusercontent.com/2818123/117589702-905c8c00-b101-11eb-8f3d-5d17cab34809.png)
 
-Awesome Recipes
 
-This is a project to create a basic system for recipes community.
 
 Features
 + Login (Jwt, Rails Session)
